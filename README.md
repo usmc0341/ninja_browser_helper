@@ -11,7 +11,7 @@
 This script scans a Windows endpoint for installed browser extensions and aggregates the findings per user profile. It produces human‑readable output and can update two NinjaOne custom fields:
 
 - **Multiline** text field (`browserExtensions` by default) containing a formatted list  
-- **WYSIWYG** field (`browserExtensionshtml` by default) containing an HTML table
+- **WYSIWYG** field (`browserExtensionsHtml` by default) containing an HTML table
 
 If custom fields aren’t configured or you set them blank, the script will still print results to STDOUT for auditing and troubleshooting.
 
@@ -65,7 +65,7 @@ For each detected extension:
 ```powershell
 param (
     [Alias('CustomFieldName')] [string] $MultilineCustomField = 'browserExtensions',
-    [string] $WysiwygCustomField = 'browserExtensionshtml'
+    [string] $WysiwygCustomField = 'browserExtensionsHtml'
 )
 ```
 
